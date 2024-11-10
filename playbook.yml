@@ -56,5 +56,6 @@
         image: "{{ docker_image }}:{{ docker_tag }}"
         state: started
         restart_policy: always
-        published_ports:
-          - "3000:3000"  # Change this if necessary
+        ports:
+          - "3000:3000"  # Explicitly expose port 3000
+
